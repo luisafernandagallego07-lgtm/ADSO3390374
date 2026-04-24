@@ -4,7 +4,7 @@
 
 ### Centro de Procesos Industriales y Construccion
 
-*** Regional Caldas ***
+***Regional Caldas***
 
 ---
 
@@ -15,6 +15,10 @@
 |03. |CSS        |look & feel - Cascading Style Sheet  |
 |04. |Javascript |Behavior - Programing Languaje       |
 
+---
+
+![profile](/src/imgs/profile.jpg)
+***Luisa Fernanda Gallego***
 [ADSO Files DRIVE] (https://tinyurl.com/wnkk334u)
 
 [VERCEL URL] (https://vercel.app)
