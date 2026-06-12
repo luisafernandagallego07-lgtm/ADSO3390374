@@ -61,7 +61,7 @@ a:is(:link, :visited) {
   /* Main */
   main {
     padding: 1rem;
-    width: 380px;
+    width: 600px;
     header.mainmenu {
       display: flex;
       justify-content: center;
@@ -109,7 +109,7 @@ a:is(:link, :visited) {
         text-decoration: none;
         padding: 0.4rem;
         transition: all 0.4s ease-in;
-        width: 300px;
+        width: 500px;
         span {
           background-color: #3793b8;
           color: #fffc;
@@ -180,12 +180,16 @@ a:is(:link, :visited) {
         margin: 0;
       }
       xmp {
+        display: block;
+        font-size: 0.8rem;
         background-color: #0009;
-        padding-bottom: 1rem;
+        padding: 1rem;
         border-radius: 0.4rem;
         color: #70BB14;
-        justify-content: center;
-        display: flex;
+        overflow-x: auto;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        max-width: 100%;
       }
     }
   }
