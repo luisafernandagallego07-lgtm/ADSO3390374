@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>24 - Challenge Layout</title>
     <style>
-        body.challenge {
+        body.reto {
+            margin: 0;
             font-family: Arial, Helvetica, sans-serif;
             background-color: #17A053;
-            margin: 0;
         }
 
-        .spr {
-            background-repeat: no-repeat;
+        .sprite {
             background-image: url(/03-css/imgs/sprite.png);
+            background-repeat: no-repeat;
         }
 
         header {
@@ -21,10 +21,10 @@
             text-align: center;
         }
 
-        header .brand {
-            margin: 0 auto 2rem;
+        header .logo {
             width: 180px;
             height: 180px;
+            margin: 0 auto 2rem;
             background-position: -12px -400px;
         }
 
@@ -47,123 +47,123 @@
             text-decoration: none;
         }
 
-        .gallery {
+        .portafolio {
             display: flex;
             gap: 1.3rem;
             max-width: 1100px;
-            padding: 1.3rem;
             margin: 2rem auto;
+            padding: 1.3rem;
             background-color: #09692e;
         }
 
-        .gallery .card {
+        .portafolio .tarjeta {
             position: relative;
-            height: 222px;
             flex: 1;
+            height: 222px;
             overflow: hidden;
             border: 2px solid #fff;
         }
 
-        .gallery .card .spr {
+        .portafolio .tarjeta .sprite {
             width: 100%;
             height: 100%;
             background-position: -465px 0;
         }
 
-        .gallery .card h3 {
+        .portafolio .tarjeta h3 {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             margin: 0;
             padding: 1.6rem 0;
-            color: #000;
             text-align: center;
+            color: #000;
             background-color: rgba(255, 255, 255, 0.212);
         }
 
-        .gallery .card:hover h3 {
+        .portafolio .tarjeta:hover h3 {
             background-color: rgba(255, 255, 255, 0.856);
         }
 
-        .features {
+        .sprites {
             display: flex;
             flex-direction: column;
             gap: 0.6rem;
             max-width: 1100px;
-            padding: 0.6rem;
             margin: 2rem auto;
+            padding: 0.6rem;
             background-color: #09692e;
         }
 
-        .features .row {
+        .sprites .fila {
             display: flex;
             align-items: center;
-            padding: 1.5rem 2rem;
             gap: 2rem;
+            padding: 1.5rem 2rem;
             background-color: #fff;
         }
 
-        .features .row .badge {
-            flex-shrink: 0;
+        .sprites .fila .icono {
             width: 86px;
             height: 95px;
+            flex-shrink: 0;
             background-position: -299px -493px;
         }
 
-        .features .row p {
+        .sprites .fila p {
             flex: 1;
             margin: 0;
-            text-align: justify;
-            line-height: 1.7;
             color: #333;
+            line-height: 1.7;
+            text-align: justify;
         }
 
-        .features .row:hover p {
+        .sprites .fila:hover p {
             color: #1e7d3c;
         }
 
-        .features .row .can {
-            flex-shrink: 0;
+        .sprites .fila .lata {
             width: 90px;
             height: 157px;
+            flex-shrink: 0;
             background-position: -95px -213px;
         }
 
         footer {
             max-width: 1100px;
-            padding: 2rem;
             margin: 2rem auto;
+            padding: 2rem;
             text-align: center;
             background-color: #fff;
         }
 
-        footer .banner {
-            margin: 0 auto 1.5rem;
+        footer .img {
             width: 335px;
             height: 182px;
+            margin: 0 auto 1.5rem;
             background-position: -465px -418px;
         }
 
         footer nav {
-            padding-top: 1rem;
             display: flex;
             justify-content: space-between;
+            padding-top: 1rem;
         }
 
         footer nav p {
-            padding-bottom: 1rem;
-            border-bottom: 3px solid transparent;
             color: #333;
             font-weight: bold;
             text-transform: uppercase;
             text-decoration: none;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid transparent;
         }
     </style>
 </head>
-<body class="challenge">
+<body class="reto">
     <header>
-        <div class="brand spr"></div>
+        <div class="logo sprite"></div>
         <nav>
             <p>Inicio</p>
             <p>Nosotros</p>
@@ -173,51 +173,51 @@
         </nav>
     </header>
 
-    <section class="gallery">
-        <div class="card">
+    <section class="portafolio">
+        <div class="tarjeta">
             <h3>Sprite 01</h3>
-            <div class="spr"></div>
+            <div class="sprite"></div>
         </div>
-        <div class="card">
+        <div class="tarjeta">
             <h3>Sprite 02</h3>
-            <div class="spr"></div>
+            <div class="sprite"></div>
         </div>
-        <div class="card">
+        <div class="tarjeta">
             <h3>Sprite 03</h3>
-            <div class="spr"></div>
+            <div class="sprite"></div>
         </div>
     </section>
 
-    <section class="features">
-        <div class="row">
-            <div class="badge spr"></div>
+    <section class="sprites">
+        <div class="fila">
+            <div class="icono sprite"></div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, laboriosam cumque sit vero praesentium id tempore, quibusdam asperiores eius quaerat expedita repudiandae sequi deleniti labore quis animi. Reprehenderit, ut! Sit!</p>
-            <div class="can spr"></div>
+            <div class="lata sprite"></div>
         </div>
-        <div class="row">
-            <div class="badge spr"></div>
+        <div class="fila">
+            <div class="icono sprite"></div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, eum earum! Quam, odio? Voluptate qui quam, iusto rerum eaque placeat quaerat molestiae veritatis alias dicta facere doloremque quia, quasi ipsam?</p>
-            <div class="can spr"></div>
+            <div class="lata sprite"></div>
         </div>
-        <div class="row">
-            <div class="badge spr"></div>
+        <div class="fila">
+            <div class="icono sprite"></div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate culpa fuga sed velit in dicta. Dolores, ullam debitis illum ipsam minus, doloremque obcaecati adipisci, quia sunt maxime sequi? Aut, eaque?</p>
-            <div class="can spr"></div>
+            <div class="lata sprite"></div>
         </div>
-        <div class="row">
-            <div class="badge spr"></div>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo ducimus labore pariatur quos eos dicta excepturi perspiciatis eius incidunt debitis architecto id neque eum voluptatum, obcaecati quasi ut. Itaque, sunt?</p>
-            <div class="can spr"></div>
+        <div class="fila">
+            <div class="icono sprite"></div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo ducimus labore pariatur quos eos dicta excepturi perspiciatis eius incidunt debitis architecto id neque eum voluptatum, obcaecati quasi ut. Itaque, sunt? </p>
+            <div class="lata sprite"></div>
         </div>
-        <div class="row">
-            <div class="badge spr"></div>
+        <div class="fila">
+            <div class="icono sprite"></div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea temporibus maxime placeat amet vitae voluptatum commodi pariatur animi, quos praesentium consequuntur error labore! Totam voluptatum natus expedita vero laborum voluptates?</p>
-            <div class="can spr"></div>
+            <div class="lata sprite"></div>
         </div>
     </section>
 
     <footer>
-        <div class="banner spr"></div>
+        <div class="img sprite"></div>
         <nav>
             <p>Inicio</p>
             <p>Nosotros</p>
