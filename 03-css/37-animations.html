@@ -3,53 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>37 - Animations </title>
+    <title>37-animations</title>
     <link rel="stylesheet" href="../src/css/master.css">
-    <style>
+ <style>
         section {
-            div.jungle {
-                border: 2px solid red;
-                background:  url(imgs/jungle.png);
-                            no-repeat center /contain;
-                            margin: 0 auto;
-                position: relative;
-                height: 390px;
-                width: 320;
+        div.jungle {
+          background: url(imgs/jungle.png) no-repeat center / contain;
+          margin: 0 auto;
+          overflow: hidden;
+          height: 390px;
+          position: relative;
+          width: 320px;
 
-                img.logo {
-                    position: absolute;
-                    transform: scale(.5);
-                    animation: 2.8s animLogo ease-in infinite;
-                    top: 10px;
+          img.logo {
+            position: absolute;
+            transform: scale(0.5);
+            animation: 2.8s animLogo ease-in infinite;
+            top: 10px;
+          }
 
-                }
-                img.dk {
-                    position: absolute;
-                    left: 90px;
-                    top: 140;
-                    width: 140px;
-                    animation: ;
-                }
-            }
+          img.dk {
+            position: absolute;
+            left: 90px;
+            top: 140px;
+            width: 140px;
+            animation: 2s animDK ease infinite;
+          }
+
+          div.move{
+            position:absolute;
+            top:240px;
+            left: 0;
+            animation: 4s animMove ease-out infinite;
+
+             img.ryno {
+              width: 140px;
+              position: absolute;
+              object-fit: contain;
+              top:0px;
+              animation: 0.2s animRyno linear infinite;
+              }
+
+         
+          }
         }
-        @keyframes animLogo {
-            0%, 100% {
-                transform: scale(.7);
-
-            }
-            50% {
-                transform: scale(1);
-            }
-            @keyframes animDK {
-                0% {transform: translateY(-80px)rotateX(0deg); }
-                40% {transform: translateY(-80px)rotateX(0deg); }
-                50% {transform: translateY(-80px)rotateX(180deg); }
-                60% {transform: translateY(-80px)rotateX(0deg); }
-                100% {transform: translateY(0px)rotate(0deg); }
-            
-            }
+      }
+    
+      @keyframes animLogo {
+        0%,
+        100% {
+          transform: scale(0.5);
         }
-    </style>
+        50% {
+          transform: scale(1);
+        }
+      }
+
+      @keyframes animDK {
+        0% {
+          transform: translateY(-80px) rotateX(0deg);
+        }
+        40% {
+          transform: translateY(-80px) rotateX(0deg);
+        }
+        50% {
+          transform: translateY(-80px) rotateX(180deg);
+        }
+        60% {
+          transform: translateY(-80px) rotateX(0deg);
+        }
+        100% {
+          transform: translateY(0px) rotateX(0deg);
+        }
+        
+      }
+
+      @keyframes  animRyno {
+            0%, 100% { top: 0px; }
+            50% { top: -38px; }
+        }
+
+        @keyframes animMove {
+            0%    { top: 240px; left: 0px;   transform: rotateY(0deg); 
+            }
+            40%  { top: 240px; left: 380px; transform: rotateY(0deg); 
+            }
+            50%  { top: 240px; left: 380px; transform: rotateY(180deg); 
+            }
+            80%  { top: 240px; left: 0px;   transform: rotateY(180deg);
+             } 
+        }
+
+
+ </style>
 </head>
 <body class="css">
     <a href="index.html" class="btn-home">
@@ -57,19 +103,19 @@
     </a>
         <main>
             <header class="mainmenu ">
-            <h1>37 - Animations </h1>
+            <h1>37-animations</h1>
             <h4>Lets an element gradually change from one style to another.</h4>
             </header>
-         <main>
+         
       <section>
-                    <div class="jungle">
+       
+            <div class="jungle">
                 <img src="imgs/logo-dk.png" class="logo">
                 <img src="imgs/dk.png" class="dk">
                 <div class="move">
                     <img src="imgs/ryno.png" class="ryno">
                 </div>
             </div>
- 
       </section>
       
     </main>

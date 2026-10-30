@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>38-media-queries</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap");
+
+        * {
+            transition: all 0.5s ease;
+        }
+
+        body{
+            background-color: #013571;
+            color: #fff;
+            font-family: Poppins, sans-serif;
+            padding: 1rem;
+
+            main{
+                border: 10px solid #fff;
+                width: 1200px; /* 1280px - (20px + 32px)  => 1280*/
+                padding: 1rem; /* 32px */
+                margin: 0 auto;
+
+                header{
+                    figure.logo{
+                        background: url(imgs/pepsi01.png)
+                                    no-repeat center;
+                    display: block;
+                    margin: 0 auto;
+                    height: 354px;
+                    padding: 0;
+                    width: 919px;
+                    }
+
+                    menu {
+                        padding: 0;
+                        a:is(:link, :visited) {
+                            color: #013571;
+                            background-color: #fff;
+                            font-size: 1.2rem;
+                            font-weight: 500;
+                            text-align: center;
+                            text-decoration: none;
+                            padding: 0.8rem 1rem;
+                            display: inline-block;
+                            width: 204px;
+                            transition: all 0.5s ease;
+                            &:hover {
+                                transform: translateY(-8px) scale(1.02);
+                            }
+
+                        }
+                    }
+                }
+                section {
+                    h2 {
+                        text-align: center;
+                        font-size: 2.8rem;
+                        font-weight: 400;
+                    
+                    }
+                    h2:nth-of-type(2) {display: none;}
+                    h2:last-of-type {display:none; }
+                    p {
+                        text-align: justify;
+                        line-height: 1.8rem;
+                    }
+                }
+            }
+        }
+        @media (max-width: 1280px) {
+            body {
+                main {
+                    width: 800px;
+                    
+                    header {
+                        figure.logo {
+                            background: url(imgs/pepsi02.png) no repeat center;
+
+                            height: 370;
+                            width: 349;
+
+                        
+                        }
+                        menu {
+                            a:is(:link, :visited) {
+                                width: 124px;
+                            }
+                        }
+                    }
+                section {
+                    h2:first-of-type {display: none;}
+                    h2:nth-of-type(2) {display:block; }
+                }
+            }
+        }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <figure class="logo"></figure>
+            <menu>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Products</a>
+                <a href="#">Contact</a>
+            </menu>
+        </header>
+        <section>
+            <h2>Desktop: (> 1280px)</h2>
+            <h2>Tablet: (> 800px < 1280ppx)</h2>
+            <h2>Mobile: (< 800px)</h2>
+            
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quaerat excepturi porro, incidunt obcaecati tempore minus quisquam dolores modi animi ullam inventore quasi cum reiciendis nostrum autem aliquam velit sapiente, delectus qui hic consequuntur eligendi! Voluptas iusto natus quidem fuga nesciunt odio nam delectus nihil, modi enim culpa quasi sed blanditiis sequi rem recusandae possimus consectetur rerum doloremque quo debitis aspernatur excepturi sint in. Eveniet nihil quam excepturi numquam sed dicta. Tenetur asperiores sint tempore eius eaque neque suscipit assumenda temporibus commodi voluptate ullam nulla sapiente numquam laboriosam obcaecati nisi aperiam praesentium dicta, vel labore odio accusantium. Facilis, neque. Recusandae quos error repudiandae modi dignissimos voluptas maxime nulla excepturi sint, veritatis voluptatibus nihil accusantium optio, quisquam aut? Nemo, magni eum!
+            </p>
+        </section>
+    </main>
+    
+</body>
+</html>
