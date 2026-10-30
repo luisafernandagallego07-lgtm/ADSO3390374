@@ -1,0 +1,233 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Responsive Design (Media Queries)</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+		* {
+			transition: all 0.5s ease;
+		}
+        :root {
+            --color-1: #f0e3de;
+            --color-2: #fff;
+        }
+		body {
+            background: #2f2830 url(imgs/fondo.png) no-repeat center -200px /cover;
+            background-attachment: fixed;
+            font-family: 'Poppins', sans-serif;
+		}
+		main {
+			margin: 0px auto;
+			width: 1280px;
+		}
+		header div.logo {
+			background: url(imgs/logod.png) no-repeat center;
+			background-size: contain;
+			height: 360px;
+		}
+		section.boxes {
+			margin-top: 40px;
+		}
+		section.boxes div {
+			display: inline-block;
+			height: 280px;
+			margin-right: 28px;
+			position: relative;
+			width: 280px;
+		}
+		section.boxes div:first-child {
+			margin-left: 28px;
+		}
+		section.boxes div:last-child {
+			margin-right: 0px;
+		}
+		section.boxes div:nth-child(1) {
+			background: url(imgs/akaza.png) no-repeat center;
+			background-size: cover;
+		}
+		section.boxes div:nth-child(2) {
+			background: url(imgs/nezuko.png) no-repeat center;
+			background-size: cover;
+		}
+        section.boxes div:nth-child(3) {
+			background: url(imgs/koyuki.png) no-repeat center;
+			background-size: cover;
+		}
+        section.boxes div:nth-child(4) {
+			background: url(imgs/tomioka.png) no-repeat center;
+			background-size: cover;
+		}
+		section.boxes div p {
+			background-color: #000b;
+            -webkit-backdrop-filter: blur(2px);
+                    backdrop-filter: blur(2px);
+            border-top: 2px solid var(--color-2);
+			color: var(--color-1);
+			bottom: 0;
+			font-size: 1.4rem;
+			height: 20px;
+			margin: 0px;
+			padding: 20px 20px 30px 20px;
+			position: absolute;
+			text-align: center;
+			width: 240px;
+			transition: all 0.4s ease-in;
+		}
+		section.boxes div:hover {
+            transform: scale(1.05);
+			cursor: pointer;
+		}
+		section.boxes div:hover p {
+			height: 60px;
+		}
+		footer {
+			margin-top: 40px;
+		}
+		footer article {
+			background-color: #0006;
+            -webkit-backdrop-filter: blur(2px);
+                    backdrop-filter: blur(2px);
+			height: 280px;
+			position: relative;
+			margin: 50px 28px;
+		}
+		footer article figure {
+			height: 280px;
+			margin: 0px;
+			width: 280px;
+		}
+		footer article.art1 figure {
+			background: #0009 url(imgs/tanjiro.png) no-repeat center /contain;
+		}
+        footer article.art2 figure {
+			background: #0009 url(imgs/inozuke.png) no-repeat center /contain;
+		}
+        footer article.art1 figure {
+			background: #0009 url(imgs/tanjiro.png) no-repeat center /contain;
+		}
+		footer article figure,
+		footer article div {
+			display: inline-block;
+			vertical-align: top;
+		}
+		footer article div {
+			margin-left: 28px;
+			width: 600px;
+		}
+		footer article div h2 {
+            border-bottom: 2px solid var(--color-2);
+			color: var(--color-1);
+			font-size: 2rem;
+			margin: 20px 0px;
+		}
+		footer article div p {
+			color: #fff9;
+			line-height: 1.4em;
+			text-align: justify;
+		}
+		/* - - - - - - - - - - - - - - - - - - - - - */
+		@media (max-width: 1290px) {
+			main {
+				width: 680px;
+			}
+			section.boxes div {
+				margin: 28px;
+			}
+			footer article div {
+				width: 280px;
+			}
+			footer article div h2 {
+				font-size: 1.4rem;
+			}
+			footer article div p {
+				overflow: scroll;
+				height: 180px;
+			}
+		}
+		/* - - - - - - - - - - - - - - - - - - - - - */
+		@media (max-width: 690px) {
+            body {
+                background: #2f2830 url(imgs/inozuke.png) no-repeat center /cover;
+                background-attachment: fixed;
+            }
+			main {
+				width: 480px;
+			}
+			section.boxes div {
+				display: block;
+				margin: 28px auto !important;
+                width: 90%;
+                height: 340px;
+			}
+            section.boxes div p {
+                height: 20px;
+                width: 392px;
+            }
+			footer article {
+				height: 580px;
+				margin: 40px auto;
+				width: 90%;
+			}
+            footer article figure {
+                background-size: 180%;
+            }
+			footer article figure,
+			footer article div {
+				display: block;
+                width: 100%;
+			}
+			footer article div {
+				margin-left: 0px;
+			}
+            footer article div h2 {
+                text-indent: 0.8rem;
+            }
+            footer article div p {
+                padding: 0.8rem;
+            }
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<header>
+			<div class="logo"></div>
+		</header>
+		<section class="boxes">
+			<div class="box1">
+				<p>Akaza</p>
+			</div>
+			<div class="box2">
+				<p>Nezuko</p>
+			</div>
+			<div class="box3">
+				<p>koyuki</p>
+			</div>
+			<div class="box4">
+				<p>Tomioka</p>
+			</div>
+		</section>
+		<footer>
+			<article class="art1">
+				<figure></figure>
+				<div class="content">
+					<h2> TANJIRO </h2>
+					<p>
+						Tiene la capacidad de utilizar la Respiración del Agua y la Danza del Dios del Fuego (Hinokami Kagura), con las que realiza ataques muy rápidos y poderosos. También posee un olfato extraordinario que le permite detectar demonios, reconocer olores y encontrar los puntos débiles de sus enemigos. Además, tiene mucha resistencia, agilidad y una gran capacidad para luchar.
+					</p>
+				</div>
+			</article>
+			<article class="art2">
+				<figure></figure>
+				<div class="content">
+					<h2> INOSUKE </h2>
+					<p>
+						Tiene la capacidad de utilizar la Respiración del Agua y la Danza del Dios del Fuego (Hinokami Kagura), con las que realiza ataques muy rápidos y poderosos. También posee un olfato extraordinario que le permite detectar demonios, reconocer olores y encontrar los puntos débiles de sus enemigos. Además, tiene mucha resistencia, agilidad y una gran capacidad para luchar.
+				</div>
+			</article>
+		</footer>
+	</main>
+
+</body></html>
